@@ -1,0 +1,17 @@
+1. grep -E '[7-9]' essca_students.csv > rattrapage.csv
+
+2. grep -E '1[1-9]|20' essca_students.csv > validation.csv
+
+3. grep -E -v '[7-9]|[1-2][0-9]' essca_students.csv > redoublement.csv
+
+
+4.
+echo "Nombre d'étudiants qui vont au rattrapage:"
+wc -l < rattrapage.csv
+echo "Nombre d'étudiants qui ont validés:"
+wc -l < validation.csv
+echo "Nombre d'étudiants qui redoublent:"
+wc -l < redoublement.csv
+
+5.
+dossier_parent | cut -d ',' -f4 > mail.csv
